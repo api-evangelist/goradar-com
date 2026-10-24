@@ -1,0 +1,32 @@
+generated: '2026-10-24'
+method: probed
+source: https://goradar.com/privacy/
+signals:
+  data_subject_request:
+    evidence:
+      - source: https://goradar.com/privacy/
+        http_status: 200
+        fetched: "yes"
+        quote: "You may request information about the personal information we hold about you."
+    note: Provides right of access for data subjects.
+  data_retention:
+    evidence:
+      - source: https://goradar.com/privacy/
+        http_status: 200
+        fetched: "yes"
+        quote: "We will retain your personal information only for as long as necessary to fulfill the purposes for which it was collected, including for the purposes of satisfying any legal, accounting, or reporting requirements."
+    note: States retention period policy.
+  subprocessors:
+    evidence:
+      - source: https://goradar.com/privacy/
+        http_status: 200
+        fetched: "yes"
+        quote: "Service providers   Publicly available databases   3."
+    note: Mentions use of service providers as subprocessors.
+  data_residency:
+    evidence:
+      - source: https://goradar.com/privacy/
+        http_status: 200
+        fetched: "yes"
+        quote: "Location Information: General location information based on IP address and, if you allow, more precise location data from your device."
+    note: Describes location data collection.

@@ -1,25 +1,71 @@
 aid: goradar-com
+
 name: Radar
-description: 'Radar is a company surfaced via the API Evangelist harvest backlog (source: vc-portfolio;
-  backed by y-combinator) and added to the network as a stub for full-pipeline profiling.'
+
+image: https://goradar.com/wp-content/uploads/2017/11/RADAR_LOGO_ORANGE_MASTER_4X.png
+
+description: 'Radar provides autonomous retail solutions using advanced RFID technology to deliver real-time inventory visibility and checkout automation. Their platform tracks every item in a store with unprecedented speed and location accuracy, enabling instant restocking, precise customer behavior insights, and checkout‑free experiences. By combining high‑precision RFID with AI, Radar aims to transform retail operations, reduce costs, and improve shopper satisfaction across the entire supply chain.'
+
 url: https://raw.githubusercontent.com/api-evangelist/goradar-com/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:vc-portfolio
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-24 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-24'
+
 modified: '2026-10-24'
+
 tags:
 - Company
-apis: []
+- Retail
+- RFID
+- Inventory
+- Automation
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
-x-backed-by:
-- y-combinator
+
 common:
+- type: Hosts
+  url: hosts/goradar-com-hosts.yml
+- type: Vendors
+  url: vendors/goradar-com-vendors.yml
+- type: DomainSecurity
+  url: security/goradar-com-domain-security.yml
 - type: Website
   url: https://goradar.com
+- type: Documentation
+  url: https://goradar.com/
+- type: TermsOfService
+  url: https://goradar.com/terms-of-service/
+- type: PrivacyPolicy
+  url: https://goradar.com/privacy/
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: js-rendered-docs
+  detail: The provider's documentation site renders via JavaScript, preventing machine‑readable contract discovery.
+  evidence:
+    - url: https://goradar.com
+      status: 200
+  checked: '2026-10-24'
+
+x-backed-by:
+- y-combinator
+x-enrichment:
+  date: '2026-10-24'
+  status: enriched
+  artifacts_added: 8
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
